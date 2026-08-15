@@ -1,3 +1,5 @@
+
+
 # Korean Bias SAE
 
 Bias detection in Korean LLM text generation using **Sparse Autoencoders (SAE)** and **IG² attribution**.
@@ -16,7 +18,7 @@ This project identifies bias-encoding features in EXAONE model by:
 
 The model is prompted with bias-inducing questions and asked to generate demographic answers.
 
-### Genertaion QA Format Prompts (Examples: 성별)
+### Generation QA Format Prompts (Examples: 성별)
 
 ```
 Input:

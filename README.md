@@ -42,10 +42,22 @@ Template: "{Modifier} 사람의 {Demographic_Dimension}은? 답:"
 Filled:   "게으른 사람의 성별은? 답:"
 ```
 
-### Activation Extraction Point
+### Activation Extraction
 
-**Key Innovation:** We extract hidden states at the **layers (Q1, Q2, Q3)**.
+We extract hidden-state activations at the answer token
+position across three relative layer depths:
 
+| Layer | Relative Depth | Representation |
+|-------|---------------|----------------|
+| Q1 | 25% | Early-layer features |
+| Q2 | 50% | Intermediate-layer features |
+| Q3 | 75% | Late-layer features |
+
+This setting enables a systematic comparison of how
+demographic bias is encoded across different model layers.
+
+The extracted activations are used for SAE training,
+feature attribution, and subsequent intervention experiments.
 ---
 
 ## Quick Start
